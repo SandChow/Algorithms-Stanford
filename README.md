@@ -1,2 +1,6 @@
 # Algorithms-Stanford
-Working on Coursera's Algorithms Specialization by Stanford University!
+## Algorithms
+### Divide-and-Conquer
+-> Karatsuba Algorithm
+-> Mergesort
+-> Counting Inversions
