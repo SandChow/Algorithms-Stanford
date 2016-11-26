@@ -1,6 +1,9 @@
 """
 This program counts the number of inversions in an integer array using 
 the basic merge sort concepts!
+
+IntegerArray.txt from https://www.coursera.org/learn/algorithms-divide-conquer/exam/YLbzP/programming-assignment-2
+outputs 2407905288 inversions.
 """
 def count(arr):
     if len(arr) < 2:
@@ -29,7 +32,10 @@ def merge_and_count(x, y):
     return sorted_array, count
 
 if __name__=="__main__":
-    arr = [7,6,6,5,4,3,2,1]
+    with open("IntegerArray.txt", "r") as input:
+        arr = []
+        for line in input:
+            arr.append(int(line))
     print "total ->",
     """
                      (n*(n+1)) 
