@@ -1,6 +1,5 @@
 """
-This program counts the number of inversions in an integer array using 
-the basic merge sort concepts!
+This program counts the number of inversions in an integer array using the basic merge sort concept!
 
 IntegerArray.txt from https://www.coursera.org/learn/algorithms-divide-conquer/exam/YLbzP/programming-assignment-2
 outputs 2407905288 inversions.
