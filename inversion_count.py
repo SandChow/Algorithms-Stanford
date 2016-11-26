@@ -10,14 +10,14 @@ def merge_and_count(x, y):
 	count = 0
 	sorted_array = []
 	while len(x)*len(y) is not 0:
-		if x[0] < y[0]:
+		# < or <= can be used in conventional mergesort but not here due to the way we count!
+		if x[0] <= y[0]:
 			sorted_array.append(x.pop(0))
 		else:
-			print x[0]
-			j = y.pop(0)
-			print j
-			sorted_array.append(j)
-			count += 1
+			sorted_array.append(y.pop(0))
+			# The length of x is added here instead of an increment by 1 because we want
+			# to account for all the values in x that are more than the popped y value.
+			count += len(x)
 	if len(y) is 0:
 		sorted_array += x
 	else:
@@ -25,6 +25,15 @@ def merge_and_count(x, y):
 	return sorted_array, count
 
 if __name__=="__main__":
-	arr = [1,3,5,2,4,6]
-	print "total -> ",
-	print count(arr)[1]
+	arr = [7,6,6,5,4,3,2,1]
+	print "total ->",
+	"""
+		 			 (n*(n+1)) 
+	Uses formula --> ---------
+						 2
+	Not optimized to work with duplicates.
+	"""
+	if all(arr[i] > arr[i+1] for i in xrange(len(arr)-1)):
+		print len(arr)*(len(arr)-1)/2
+	else:
+		print count(arr)[1]
