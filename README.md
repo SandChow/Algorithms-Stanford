@@ -1,6 +1,6 @@
 # Algorithms-Stanford
 ## Algorithms
 ### Divide-and-Conquer
--> Karatsuba Algorithm__
--> Mergesort__
--> Counting Inversions__
+-> Karatsuba Algorithm  
+-> Mergesort  
+-> Counting Inversions  
