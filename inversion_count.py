@@ -1,3 +1,7 @@
+"""
+This program counts the number of inversions in an integer array using 
+the basic merge sort concepts!
+"""
 def count(arr):
 	if len(arr) < 2:
 		return arr, 0
