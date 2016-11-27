@@ -11,5 +11,5 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 ## Data Structures
 ### Heap / Priority Queue
 -> Insert  
--> Extract-Min  
+-> Extract-Min / Extract-Max  
 -> Heapify  
