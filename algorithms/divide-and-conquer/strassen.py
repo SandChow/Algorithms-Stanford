@@ -33,11 +33,16 @@ def strassen(A, B):
 
     result = [[0 for column in xrange(n)] for row in xrange(n)]
 
+    # i = P4 + P5 - P2 + P6
     i = add_matrix(subtract_matrix(add_matrix(P4, P5), P2), P6)
+    # j = P1 + P2
     j = add_matrix(P1, P2)
+    # k = P3 + P4
     k = add_matrix(P3, P4)
+    # l = P1 + P5 - P3 - P7
     l = subtract_matrix(subtract_matrix(add_matrix(P1, P5), P3), P7)
-
+    
+    # m added at various indexes to induce index-shift
     for row in xrange(m):
         for column in xrange(m):
             result[row][column] = i[row][column]
