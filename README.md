@@ -6,6 +6,8 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 -> Karatsuba Algorithm  
 -> Mergesort  
 -> Counting Inversions 
+-> Strassen Matrix Multiplication  
+
 ## Data Structures
 ### Heap / Priority Queue
 -> Insert  
