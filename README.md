@@ -7,7 +7,7 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 -> Mergesort  
 -> Counting Inversions 
 ## Data Structures
-### Heap
+### Heap / Priority Queue
 -> Insert  
 -> Extract-Min  
 -> Heapify  
