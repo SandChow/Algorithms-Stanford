@@ -3,4 +3,9 @@
 ### Divide-and-Conquer
 -> Karatsuba Algorithm  
 -> Mergesort  
--> Counting Inversions  
+-> Counting Inversions 
+## Data Structures
+### Heap
+-> Insert  
+-> Extract-Min  
+-> Heapify  
