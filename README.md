@@ -5,7 +5,7 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 ### Divide-and-Conquer
 -> Karatsuba Algorithm  
 -> Mergesort  
--> Counting Inversions 
+-> Counting Inversions  
 -> Strassen Matrix Multiplication  
 
 ## Data Structures
