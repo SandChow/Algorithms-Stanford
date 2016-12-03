@@ -13,8 +13,8 @@ class MinHeap:
         assert (len(self.heap) > 1),"Heap is empty!"
         tmp = self.heap[1]
         self.heap[1] = self.heap.pop()
-        self.percolateDown(1)
         self.size -= 1
+        self.percolateDown(1)
         return tmp
 
     def percolateDown(self, parent):
