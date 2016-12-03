@@ -11,11 +11,17 @@ class MinHeap:
 
     def extractMin(self):
         assert (len(self.heap) > 1),"Heap is empty!"
-        tmp = self.heap[1]
+        minimum = self.heap[1]
         self.heap[1] = self.heap.pop()
         self.size -= 1
         self.percolateDown(1)
-        return tmp
+        return minimum 
+
+    def insert(self, value):
+        self.heap.append(value)
+        self.size += 1
+        self.percolateUp(self.size)
+
 
     def percolateDown(self, parent):
         while (parent * 2) <= self.size:
@@ -23,6 +29,11 @@ class MinHeap:
             if self.heap[parent] > self.heap[smallestChild]:
                 self.swap(parent, smallestChild)
             parent = smallestChild
+
+    def percolateUp(self, child):
+        while child > 1 and self.heap[child] < self.heap[child/2]:
+            self.swap(child, child/2)
+            child /= 2
 
     def getSmallestChild(self, parent):
         # check to see if parent has two children.
