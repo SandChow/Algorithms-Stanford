@@ -22,7 +22,6 @@ class MinHeap:
         self.size += 1
         self.percolateUp(self.size)
 
-
     def percolateDown(self, parent):
         while (parent * 2) <= self.size:
             smallestChild = self.getSmallestChild(parent)
