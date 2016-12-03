@@ -1,5 +1,9 @@
 from Graph import Graph
+from pprint import pprint
 
 if __name__=="__main__":
-    x = Graph([('A', 'B'), ('B', 'C')], True)
-    print x._graph
+    connections = [('A', 'B'), ('B', 'C'), ('B', 'D'), ('C', 'D'), ('E', 'F'), ('F', 'C')]
+    x = Graph(connections)
+    print x
+    x.remove('B')
+    print x
