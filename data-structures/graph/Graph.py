@@ -47,6 +47,7 @@ class Graph(object):
 
     def find_path(self, node1, node2, path = []):
         """ Finds any path from node1 to node2 which may not be the shortest """
+        
         current_path = path + [node1]
         if node1 == node2:
             return current_path
