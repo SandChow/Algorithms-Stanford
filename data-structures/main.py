@@ -1,4 +1,4 @@
-from Heap import MinHeap
+from MinHeap import MinHeap
 
 def isMinHeap(heap, length):
     for i in xrange(1, ((length-2)/2)+1):
