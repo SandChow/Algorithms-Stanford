@@ -8,7 +8,7 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 -> Counting Inversions  
 -> Strassen Matrix Multiplication  
 ### Dynamic-Programming
--> Triple-Step
+-> Triple-Step  
 -> Longest Common String  
 -> Fibonacci (matrix and non-matrix)  
 -> Minimum insertions to form a Palindrome  
