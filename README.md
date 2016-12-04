@@ -7,6 +7,12 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 -> Mergesort  
 -> Counting Inversions  
 -> Strassen Matrix Multiplication  
+### Dynamic-Programming
+-> Triple-Step
+-> Longest Common String  
+-> Fibonacci (matrix and non-matrix)  
+-> Minimum insertions to form a Palindrome  
+-> Filling 3xN board with dominos (2x1 & 3x1)  
 
 ## Data Structures
 ### Heap / Priority Queue
