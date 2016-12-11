@@ -60,6 +60,34 @@ class Graph(object):
                     return new_path
         return None
 
+    def find_shortest_path(self, node1, node2, path=[]):
+        """ Finds shortest path from node1 to node2 """
+        path = path + [node1]
+        if node1 == node2:
+            return path
+        if node1 not in self._graph:
+            return None
+        shortest_path = None 
+        for node in self._graph[node1]:
+            if node not in path:
+                new_path = self.find_shortest_path(node, node2, path)
+                if new_path:
+                    if not shortest_path or len(new_path) < len(shortest_path):
+                        shortest_path = new_path
+        return shortest_path
+
+    def connected_components(self):
+        components = []
+        keys = self._graph.keys()
+        if keys: 
+            explored = []
+            for i in keys:
+                if i not in explored:
+                    current_components = self.bfs(i)
+                    explored += current_components
+                    components.append(current_components)
+        return components
+
     def bfs(self, root):
         if root:
             explored, queue = [root], deque([root])
@@ -77,4 +105,4 @@ class Graph(object):
             for connection in self._graph[root]:
                 if connection not in explored:
                     self.dfs(connection, explored)
-            return explore
+            return explored
