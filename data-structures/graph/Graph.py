@@ -1,4 +1,5 @@
 from collections import defaultdict
+from collections import deque
 
 class Graph(object):
     """ A graph that is undirected by default. """
@@ -32,10 +33,10 @@ class Graph(object):
             except KeyError:
                 pass
 
-            try:
-                del self._graph[node]
-            except KeyError:
-                pass
+        try:
+            del self._graph[node]
+        except KeyError:
+            pass
 
     def are_connected(self, node1, node2):
         """ Checks whether two nodes are connected to each other 
@@ -47,7 +48,6 @@ class Graph(object):
 
     def find_path(self, node1, node2, path = []):
         """ Finds any path from node1 to node2 which may not be the shortest """
-        
         current_path = path + [node1]
         if node1 == node2:
             return current_path
@@ -59,3 +59,22 @@ class Graph(object):
                 if new_path:
                     return new_path
         return None
+
+    def bfs(self, root):
+        if root:
+            explored, queue = [root], deque([root])
+            while queue:
+                current_node = queue.popleft()
+                for connection in self._graph[current_node]:
+                    if connection not in explored:
+                        explored.append(connection)
+                        queue.append(connection)
+            return explored
+
+    def dfs(self, root, explored=[]):
+        if root:
+            explored.append(root)
+            for connection in self._graph[root]:
+                if connection not in explored:
+                    self.dfs(connection, explored)
+            return explore
