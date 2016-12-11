@@ -32,7 +32,6 @@ class Graph(object):
                 connections.remove(node)
             except KeyError:
                 pass
-
         try:
             del self._graph[node]
         except KeyError:
@@ -87,6 +86,9 @@ class Graph(object):
                     explored += current_components
                     components.append(current_components)
         return components
+
+    def topological_sort(self):
+        sorted_graph = []
 
     def bfs(self, root):
         if root:
