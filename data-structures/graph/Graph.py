@@ -97,9 +97,11 @@ class Graph(object):
                     incoming_edges += 1
         return incoming_edges
 
+    def is_bst(self):
 
+    """
     def topological_sort(self):
-        """ Worked on directed graphs. Error if cyclic! """
+         Worked on directed graphs. Error if cyclic!
 
         all_connected_nodes = self.bfs(self._graph.keys()[0])
         in_degree_list= []
@@ -112,6 +114,7 @@ class Graph(object):
         if zeros is 0:
             raise RuntimeError("Not a directed acyclic graph (DAG)")
         print in_degree_list
+    """
 
     def bfs(self, root):
         if root:
@@ -131,3 +134,5 @@ class Graph(object):
                 if connection not in explored:
                     self.dfs(connection, explored)
             return explored
+
+    def is_bst(root):5
