@@ -8,6 +8,7 @@ class Graph(object):
         self._graph = defaultdict(set)
         self._directed = directed
         self.add_connections(connections)
+        self.number_of_nodes = len(sum(self.connected_components(), []))
 
     def __str__(self):
         return '{}({})'.format(self.__class__.__name__, dict(self._graph))
@@ -87,8 +88,30 @@ class Graph(object):
                     components.append(current_components)
         return components
 
+    def in_degree(self, node):
+        incoming_edges = 0
+        values = self._graph.values()
+        for group in values:
+            for value in group:
+                if node is value:
+                    incoming_edges += 1
+        return incoming_edges
+
+
     def topological_sort(self):
-        sorted_graph = []
+        """ Worked on directed graphs. Error if cyclic! """
+
+        all_connected_nodes = self.bfs(self._graph.keys()[0])
+        in_degree_list= []
+        zeros = 0
+        for node in all_connected_nodes:
+            count = self.in_degree(node)
+            if count == 0:
+                zeros += 1
+            in_degree_list.append((node, count))
+        if zeros is 0:
+            raise RuntimeError("Not a directed acyclic graph (DAG)")
+        print in_degree_list
 
     def bfs(self, root):
         if root:
