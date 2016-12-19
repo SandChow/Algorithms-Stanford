@@ -13,6 +13,9 @@ URL: https://www.coursera.org/learn/algorithms-graphs-data-structures
 -> Fibonacci (matrix and non-matrix)  
 -> Minimum insertions to form a Palindrome  
 -> Filling 3xN board with dominos (2x1 & 3x1)  
+### String Algorithms  
+-> Knuth-Morris-Pratt  
+-> Finite Automata  
 
 ## Data Structures
 ### Heap / Priority Queue
